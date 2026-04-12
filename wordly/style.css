@@ -1,0 +1,94 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  background: #FEFFAF;
+  color: #333;
+}
+
+
+header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+#logo {
+  color: #5F4A8B;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+
+form {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 500px;
+  margin: 0 auto 1.5rem;
+}
+
+#search-input {
+  flex: 1;
+  padding: 0.9rem;
+  border: 2px solid #B5DB8A;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.2s;
+}
+
+#search-input:focus {
+  border-color: #5F4A8B;
+  background: #fff;
+}
+
+button {
+  background: #B5DB8A;
+  border: none;
+  padding: 0.9rem 1.2rem;
+  border-radius: 24px 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #a6cf77;
+}
+
+
+#error {
+  text-align: center;
+  color: #d33;
+  margin-bottom: 1rem;
+}
+
+
+#container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 14px;
+  margin-top: 1rem;
+  border-left: 6px solid #B5DB8A;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+
+.title {
+  font-size: 1.6rem;
+  color: #5F4A8B;
+  margin-bottom: 0.5rem;
+}
+
+
+.card p {
+  margin: 0.4rem 0;
+  line-height: 1.4;
+}
