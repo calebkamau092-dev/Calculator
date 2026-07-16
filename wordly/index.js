@@ -30,6 +30,22 @@ function searchWord(event) {
       let title = document.createElement("h2");
       title.className = "word";
       title.textContent = entry.word;
+      title.style.textTransform = "Capitalize";
+
+      if (entry.phonetics && entry.phonetics[0] && entry.phonetics[0].audio) {
+        let audioBtn = document.createElement("span");
+        audioBtn.textContent = " 🔊";
+        audioBtn.style.cursor = "pointer";
+        audioBtn.style.fontSize = "20px";
+        audioBtn.title = "Play pronunciation";
+
+        audioBtn.addEventListener("click", function () {
+          let audio = new Audio(entry.phonetics[0].audio);
+          audio.play();
+        });
+
+        title.appendChild(audioBtn);
+      }
 
       card.appendChild(title);
 
@@ -39,21 +55,27 @@ function searchWord(event) {
 
         let pos = document.createElement("h3");
         pos.textContent = meaning.partOfSpeech;
-        pos.style.color = "#5F4A8B";
+        pos.style.color = "#800000";
+        pos.style.textTransform='capitalize'
 
         section.appendChild(pos);
 
         let def = document.createElement("p");
-        def.textContent = "Definition: " + meaning.definitions[0].definition;
+        def.innerHTML =
+          "<strong>Definition:</strong> " +
+          "<br>" +
+          meaning.definitions[0].definition;
         section.appendChild(def);
 
         let ex = document.createElement("p");
 
         if (meaning.definitions[0].example) {
-          ex.textContent = "Example: " + meaning.definitions[0].example;
+          ex.innerHTML =
+            "<em style='color:black'>Example:</em> " + "<br>" + meaning.definitions[0].example;
         } else {
           ex.textContent = "Example: Not available";
         }
+        ex.style.color = "gray";
 
         section.appendChild(ex);
 

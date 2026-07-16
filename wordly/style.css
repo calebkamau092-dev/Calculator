@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Nunito sans', sans-serif;
   padding: 2rem;
-  background: #FEFFAF;
+  background: #fff0f5;
   color: #333;
 }
 
@@ -12,7 +18,7 @@ header {
 }
 
 #logo {
-  color: #5F4A8B;
+  color: #800000;
   font-size: 2rem;
   letter-spacing: 1px;
 }
@@ -28,36 +34,45 @@ form {
 #search-input {
   flex: 1;
   padding: 0.9rem;
-  border: 2px solid #B5DB8A;
+ border: none;
   border-radius: 10px;
   outline: none;
   transition: 0.2s;
 }
 
 #search-input:focus {
-  border-color: #5F4A8B;
+  border-color: #570000b3;
   background: #fff;
+}
+#search-input::placeholder{
+  font-family: 'Nunito Sans';
 }
 
 button {
-  background: #B5DB8A;
+  background: #800000;
   border: none;
   padding: 0.9rem 1.2rem;
-  border-radius: 24px 4px;
+  border-radius: 25px 4px;
   cursor: pointer;
   font-weight: bold;
   transition: 0.2s;
+  color: #fff;
 }
 
 button:hover {
-  background: #a6cf77;
+  background: #800000c8;
 }
 
 
 #error {
   text-align: center;
-  color: #d33;
-  margin-bottom: 1rem;
+  color: gray;
+  margin:0 auto 1rem auto;
+  border: red;
+  background-color: rgba(255, 0, 0, 0.242);
+  width: 60%;
+  padding: 20px;
+  border-radius:4px ;
 }
 
 
@@ -66,12 +81,13 @@ button:hover {
   margin: 0 auto;
 }
 
+
 .card {
   background: white;
   padding: 1.5rem;
   border-radius: 14px;
   margin-top: 1rem;
-  border-left: 6px solid #B5DB8A;
+  border-left: 6px solid #800000;
   box-shadow: 0 8px 25px rgba(0,0,0,0.08);
   transition: transform 0.2s ease;
 }
@@ -91,4 +107,8 @@ button:hover {
 .card p {
   margin: 0.4rem 0;
   line-height: 1.4;
+}
+footer{
+  text-align: center;
+  font-size: 10px;
 }
